@@ -36,6 +36,15 @@ Calcula el negativo de una imagen
 @param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
 @param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
 
+## Subimagen:
+Genera, por copia, una imagen PGM a partir de otra imagen PGM. La imagen generada será, necesariamente, de un tamaño menor o igual que la original
+> __subimagen__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<filas_sub\> \<cols_sub\>
+@param "<fich_orig>" Nombre del fichero que contiene la imagen original
+@param "<fich_rdo>" Nombre del fichero que contendrá la subimagen resultado
+@param "<fila>" Coordenada @b Y (sobre la imagen original) de la esquina superior izquierda de la subimagen que se va a extraer.
+@param "<col>" Coordenada @b X (sobre la imagen original) de la esquina superior izquierda de la subimagen que se va a extraer.
+@param "<filas_sub>" Número de filas de la subimagen que se va a extraer.
+@param "<cols_sub>" Número de columnas de la subimagen que se va a extraer.
 
 
 */
