@@ -260,10 +260,22 @@ void set_pixel (int i, int j, byte value);
     // Genera un icono como reducción de una imagen.
     Image Subsample(int factor) const;
 
-    // Genera una subimagen.
+    /**
+     * @brief Genera una subimagen.
+     * @param nrow Fila inicial para recortar
+     * @param ncol Columna inicial para recortar
+     * @param height Número de filas
+     * @param width Número de columnas
+     * @return Imagen con el recorte
+     * @post El objeto que llama a la función no se modifica
+     */
     Image Crop(int nrow, int ncol, int height, int width) const;
 
-    // Genera una imagen aumentada 2x.
+    /**
+     * @brief Genera una imagen aumentada 2x
+     * @return Imagen aumentada
+     * @post El objeto que llama a la función no se modifica
+     */
     Image Zoom2X() const;
 
 
