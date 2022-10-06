@@ -7,6 +7,7 @@
 #include <cstring>
 #include <cassert>
 #include <iostream>
+#include <cmath>
 
 #include <image.h>
 #include <imageIO.h>
@@ -221,7 +222,98 @@ Image Image::Crop(int nrow, int ncol, int height, int width) const {
 }
 
 Image Image::Zoom2X() const {
-    return Image();
+
+    //Creamos una imagen con 2n-1 columnas y la rellenamos de las columnas conocidas
+    Image zoom_(get_rows(), (get_cols()*2)-1);
+
+    for(int j=0; j<zoom_.get_cols(); j++) {
+
+        if ((j % 2) == 0){
+
+            for (int i = 0; i < zoom_.get_rows(); i++) {
+
+                    zoom_.set_pixel(i, j, get_pixel(i , (j / 2)));
+
+            }
+
+        }
+    }
+
+    //Rellenamos las columnas nuevas interpolando
+    //Como las columnas nuevas son pares, si ademaś la fila es par
+    //tomamos el valor medio de los cuatro vecinos de sus diagonales
+    //si no tomamos el valor medio de sus dos vecinos
+    for(int j=0; j<zoom_.get_cols(); j++) {
+        for (int i = 0; i < zoom_.get_rows(); i++) {
+
+            if ((j % 2) != 0) {
+
+               if((i%2) != 0){     //Como i empieza en 0 en vez de uno realmente estamos comprobando si es par
+
+                   int suma = get_pixel(i-1,j-1)+get_pixel(i-1,j+1)+get_pixel(i+1,j+1)+get_pixel(i+1,j-1);
+                   int media = round(suma/4);
+                   zoom_.set_pixel(i, j, byte(media));
+
+               }
+
+               else{
+                   int suma = get_pixel(i,j-1)+get_pixel(i,j+1);
+                   int media = round(suma/2);
+                   zoom_.set_pixel(i, j, byte(media));
+
+               }
+
+            }
+        }
+    }
+
+    //Ahora creamos la imagen definitiva y repetimos el proceso
+    Image zoom((get_rows()*2)-1, (get_cols()*2)-1);
+
+    //Copiamos las filas de zoom_ en zoom
+    for(int i = 0; i < zoom.get_rows(); i++) {
+
+        if((i%2)==0){
+
+            for (int j = 0; j < zoom.get_cols(); j++) {
+
+                zoom.set_pixel(i, j, zoom_.get_pixel((i / 2), j ));
+
+            }
+
+        }
+
+    }
+
+    //Interpolamos las filas restantes
+    for(int i = 0; i < zoom.get_rows(); i++) {
+
+        if((i % 2) != 0){
+
+            for (int j = 0; j < zoom.get_cols(); j++) {
+
+                if((j%2) != 0){     //Como j empieza en 0 en vez de uno realmente estamos comprobando si es par
+
+                    int suma = get_pixel(i-1,j-1)+get_pixel(i-1,j+1)+get_pixel(i+1,j+1)+get_pixel(i+1,j-1);
+                    int media = round(suma/4);
+                    zoom_.set_pixel(i, j, byte(media));
+
+                }
+
+                else{
+
+                    int suma = get_pixel(i-1,j)+get_pixel(i+1,j);
+                    int media = round(suma/2);
+                    zoom_.set_pixel(i, j, byte(media));
+
+                }
+
+            }
+        }
+
+    }
+
+    return (zoom);
 }
 
 void Image::ShuffleRows() {

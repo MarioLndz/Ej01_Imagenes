@@ -1,5 +1,7 @@
-// Fichero: negativo.cpp
-// Calcula el negativo de una imagen PGM
+// Fichero: subimagen.cpp
+// Genera, por copia, una imagen PGM a partir de otra imagen
+//PGM. La imagen generada será, necesariamente, de un tamaño menor o
+// igual que la original.
 //
 
 #include <iostream>
