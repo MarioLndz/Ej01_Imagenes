@@ -53,11 +53,11 @@ int main (int argc, char *argv[]){
     cout << "   Imagen   = " << image.get_rows()  << " filas x " << image.get_cols() << " columnas " << endl;
 
     // Calcular el zoom
-
+    Image zoom = image.Zoom2X();
 
     // Guardar la imagen resultado en el fichero
-    if (image.Save(destino))
-        cout  << "La imagen se guardo en " << destino << endl;
+    if (zoom.Save(fich_rdo))
+        cout  << "La imagen se guardo en " << fich_rdo << endl;
     else{
         cerr << "Error: No pudo guardarse la imagen." << endl;
         cerr << "Terminando la ejecucion del programa." << endl;
