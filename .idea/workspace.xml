@@ -21,10 +21,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="Documentación del programa Subimagen.cpp">
+    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="Método Zoom2X() terminado y funcional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/image.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/zoom.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/zoom.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +64,10 @@
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.zoom">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="CMake Application.doc_doxygen">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="doc_doxygen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="doc_doxygen" CONFIG_NAME="Debug">
@@ -115,6 +113,7 @@
       <updated>1664786497205</updated>
       <workItem from="1664786500789" duration="2432000" />
       <workItem from="1664816729058" duration="8515000" />
+      <workItem from="1665101507178" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Documentación de Crop y Zoom2x">
       <created>1665084076093</created>
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665084102862</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Método Zoom2X() terminado y funcional">
+      <created>1665101375962</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665101375962</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +176,7 @@
     </ignored-roots>
     <MESSAGE value="Documentación de Crop y Zoom2x" />
     <MESSAGE value="Documentación del programa Subimagen.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentación del programa Subimagen.cpp" />
+    <MESSAGE value="Método Zoom2X() terminado y funcional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Método Zoom2X() terminado y funcional" />
   </component>
 </project>
