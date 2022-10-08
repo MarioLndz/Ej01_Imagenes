@@ -215,10 +215,10 @@ Image Image::Crop(int nrow, int ncol, int height, int width) const {
 
     }
 
-    Image result(width, height);
+    Image result(height, width);
 
-    for (int f = 0; f < width; f++){
-        for (int c = 0; c < height; c++){
+    for (int f = 0; f < height; f++){
+        for (int c = 0; c < width; c++){
             result.set_pixel(f, c, get_pixel(nrow+f, ncol+c));
         }
     }
