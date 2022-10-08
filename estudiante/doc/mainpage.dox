@@ -37,14 +37,24 @@ Calcula el negativo de una imagen
 @param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
 
 ## Subimagen:
+@image html crop.png
 Genera, por copia, una imagen PGM a partir de otra imagen PGM. La imagen generada será, necesariamente, de un tamaño menor o igual que la original
 > __subimagen__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<filas_sub\> \<cols_sub\>
-@param "<fich_orig>" Nombre del fichero que contiene la imagen original
-@param "<fich_rdo>" Nombre del fichero que contendrá la subimagen resultado
+@param "<fich_orig>" Nombre del fichero que contiene la imagen original.
+@param "<fich_rdo>" Nombre del fichero que contendrá la subimagen resultado.
 @param "<fila>" Coordenada @b Y (sobre la imagen original) de la esquina superior izquierda de la subimagen que se va a extraer.
 @param "<col>" Coordenada @b X (sobre la imagen original) de la esquina superior izquierda de la subimagen que se va a extraer.
 @param "<filas_sub>" Número de filas de la subimagen que se va a extraer.
 @param "<cols_sub>" Número de columnas de la subimagen que se va a extraer.
 
+## Zoom:
+Realiza un zoom 2X de una porción de la imagen mediante un simple procedimiento de interpolación.
+> __zoom__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<lado\>
+@param "<fich_orig>" Nombre del fichero que contiene la imagen original.
+@param "<fich_rdo>" Nombre del fichero que contendrá el resultado del zoom.
+@param "<fila>" Coordenada @b Y (sobre la imagen original) de la esquina superior izquierda de la subimagen que se va a extraer.
+@param "<col>" Coordenada @b X (sobre la imagen original) de la esquina superior izquierda de la subimagen que se va a extraer.
+@param "<lado>" Tamaño del lado del cuadrado.
+@post Si el cuadrado descrito no está totalmente incluído en la imagen se creará el mayor cuadrado posible.
 
 */
