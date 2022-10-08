@@ -174,10 +174,28 @@ void Image::Invert() {
 }
 
 double Image::Mean(int i, int j, int height, int width) const {
-    return 0;
-}
 
+    //Recorremos la matriz o submatriz indicada y calculamos la
+    //suma de todos los valores
+    double suma=0;
+    for(int fila=i; fila<(i+height); i++){
+        for(int col=j; col<(j+width); j++){
+
+            suma+= get_pixel(fila, col);
+
+        }
+    }
+
+    //Calculamos la media dividiendo entre el numero total de
+    //pixeles sumados
+    double media = round(suma/(height*width));
+
+    return(media);
+
+}
 Image Image::Subsample(int factor) const {
+
+
     return Image();
 }
 
@@ -280,10 +298,15 @@ Image Image::Zoom2X() const {
 
 void Image::AdjustContrast (byte in1, byte in2, byte out1, byte out2){
 
+    //Calculamos la arte constante e independiente del valor
+    // de cada píxel a transformar
     const double TRAMO1 = 1.0*out1/in1;
     const double TRAMO2 = 1.0*(out2 - out1)/(in2 - in1);
     const double TRAMO3 = 1.0*(255 - out2)/(255 - in2);
 
+    //Recorremos toda la imagen y en función de en que tramo de
+    //la escala de grises se encuentre el byte, calculamos
+    //el nuevo byte usando una transformación lineal
     for(int k=0; k<get_rows()*get_cols(); k++){
 
         if(get_pixel(k) < in1 ){
@@ -311,6 +334,22 @@ void Image::AdjustContrast (byte in1, byte in2, byte out1, byte out2){
 }
 
 void Image::ShuffleRows() {
+
+    const int p = 9973;
+
+    Image temp(rows,cols);
+
+    int newr;
+    for (int r=0; r<rows; r++){
+
+        newr = r*p % rows;
+        for (int c=0; c<cols;c++)
+
+            temp.set_pixel(r,c,get_pixel(newr,c));
+
+    }
+
+    Copy(temp);
 
 }
 
