@@ -165,10 +165,6 @@ bool Image::Save (const char * file_path) const {
     return WritePGMImage(file_path, p, rows, cols);
 }
 
-void Image::AdjustContrast(byte in1, byte in2, byte out1, byte out2) {
-
-}
-
 void Image::Invert() {
     const int MAX_BYTE_VALUE = 255;
 
@@ -215,10 +211,10 @@ Image Image::Crop(int nrow, int ncol, int height, int width) const {
 
     }
 
-    Image result(height, width);
+    Image result(width, height);
 
-    for (int f = 0; f < height; f++){
-        for (int c = 0; c < width; c++){
+    for (int f = 0; f < width; f++){
+        for (int c = 0; c < height; c++){
             result.set_pixel(f, c, get_pixel(nrow+f, ncol+c));
         }
     }
@@ -230,6 +226,7 @@ Image Image::Zoom2X() const {
 
     //Creamos una imagen con 2n-1 columnas y la completamos
     Image zoom_(get_rows(), (get_cols() * 2) - 1);
+    cout << "Creada Imagen Zoom_: " << zoom_.get_rows() << "x" << zoom_.get_cols() << endl;
 
     for(int j=0; j<zoom_.get_cols(); ++j) {
 
@@ -253,6 +250,7 @@ Image Image::Zoom2X() const {
 
     //Ahora creamos la imagen definitiva y repetimos el proceso
     Image zoom((get_rows()*2) - 1, zoom_.get_cols());
+    cout << "Creda Imagen Zoom: " << zoom.get_rows() << "x" << zoom.get_cols() << endl;
 
     //Copiamos las filas de zoom_ en zoom
     for(int i = 0; i < zoom.get_rows(); i++) {
@@ -269,18 +267,8 @@ Image Image::Zoom2X() const {
             //Interpolamos las filas restantes
 
             for (int j = 0; j < zoom.get_cols(); j++) {
-                if(j%2 == 0){
-                    //Fila y columna impares, tomaremos el valor medio de sus vecinos
-                    zoom.set_pixel(i, j, round((zoom_.get_pixel((i - 1) / 2, j) + zoom_.get_pixel((i + 1) / 2, j)) / 2.0));
 
-                } else {
-                    //Fila y columna pares, tomaremos la media de los cuatro vecinos de sus diagonales
-                    int suma =   zoom_.get_pixel((i-1)/2, j-1) + zoom_.get_pixel((i-1)/2, j+1) +
-                                    zoom_.get_pixel((i+1)/2, j-1) + zoom_.get_pixel((i+1)/2, j+1);
-
-                    zoom.set_pixel(i, j, round(suma/4.0));
-
-                }
+                zoom.set_pixel(i, j, round((zoom_.get_pixel((i - 1) / 2, j) + zoom_.get_pixel((i + 1) / 2, j)) / 2.0));
 
             }
         }
@@ -288,6 +276,38 @@ Image Image::Zoom2X() const {
     }
 
     return (zoom);
+}
+
+void Image::AdjustContrast (byte in1, byte in2, byte out1, byte out2){
+
+    const double TRAMO1 = 1.0*out1/in1;
+    const double TRAMO2 = 1.0*(out2 - out1)/(in2 - in1);
+    const double TRAMO3 = 1.0*(255 - out2)/(255 - in2);
+
+    for(int k=0; k<get_rows()*get_cols(); k++){
+
+        if(get_pixel(k) < in1 ){
+
+            set_pixel(k, round((TRAMO1 * get_pixel(k) )));
+
+        }
+
+        else if(get_pixel(k) <= in2){
+
+            set_pixel(k, round(out1 + (TRAMO2 * (get_pixel(k)-in1) )));
+
+        }
+
+        else{
+
+            set_pixel(k, round(out2 + (TRAMO3 * (get_pixel(k)-in2) )));
+
+        }
+
+    }
+
+
+
 }
 
 void Image::ShuffleRows() {
