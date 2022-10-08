@@ -233,11 +233,11 @@ Image Image::Zoom2X() const {
     cout << "Creada Imagen Zoom_: " << zoom_.get_rows() << "x" << zoom_.get_cols() << endl;
 
     for(int j=0; j<zoom_.get_cols(); ++j) {
-        cout << "Fila " << j << "\n";
+
         if ((j % 2) == 0){
             //Rellenamos las columnas antiguas
             for (int i = 0; i < zoom_.get_rows(); ++i) {
-                cout << i << endl;
+
                 zoom_.set_pixel(i, j, get_pixel(i , (j / 2)));
 
             }
@@ -246,7 +246,7 @@ Image Image::Zoom2X() const {
             //Rellenamos las columnas nuevas interpolando
 
             for (int i = 0; i < zoom_.get_rows(); ++i){
-                zoom_.set_pixel(i, j, (get_pixel(i, (j-1)/2) + get_pixel(i, (j+1)/2)) / 2);
+                zoom_.set_pixel(i, j, round((get_pixel(i, (j-1)/2) + get_pixel(i, (j+1)/2)) / 2.0));
             }
 
         }
@@ -272,7 +272,7 @@ Image Image::Zoom2X() const {
 
             for (int j = 0; j < zoom.get_cols(); j++) {
 
-                zoom.set_pixel(i, j, (zoom_.get_pixel((i - 1) / 2, j) + zoom_.get_pixel((i + 1) / 2, j)) / 2);
+                zoom.set_pixel(i, j, round((zoom_.get_pixel((i - 1) / 2, j) + zoom_.get_pixel((i + 1) / 2, j)) / 2.0));
 
             }
         }

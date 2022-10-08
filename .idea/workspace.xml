@@ -21,8 +21,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="Método Zoom2X() terminado y funcional">
+    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="prueba_">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/image.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/zoom.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/zoom.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/juez.sh" beforeDir="false" afterPath="$PROJECT_DIR$/juez.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +63,12 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/mario/Escritorio/ED/Projects/GIT&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.doc_doxygen">
+  <component name="RunManager" selected="CMake Application.subimagen">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -90,10 +94,25 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="zoom" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="vacas.pgm output_zoomed.pgm 0 0 5" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="zoom" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="zoom">
+    <configuration name="zoom" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="vacas.pgm zoom_pub.pgm 85 145 60 " REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$USER_HOME$/Documentos/ED/ej01_imagenes/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="zoom" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="zoom">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="juez.sh" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/juez.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="CMake Application.doc_doxygen" />
@@ -101,6 +120,7 @@
       <item itemvalue="CMake Application.negativo" />
       <item itemvalue="CMake Application.subimagen" />
       <item itemvalue="CMake Application.zoom" />
+      <item itemvalue="Shell Script.juez.sh" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -113,30 +133,29 @@
       <updated>1664786497205</updated>
       <workItem from="1664786500789" duration="2432000" />
       <workItem from="1664816729058" duration="8515000" />
-      <workItem from="1665101507178" duration="1000" />
+      <workItem from="1664873778740" duration="875000" />
+      <workItem from="1664994113835" duration="2854000" />
+      <workItem from="1665068780758" duration="5527000" />
+      <workItem from="1665152784149" duration="1964000" />
+      <workItem from="1665154761005" duration="1313000" />
+      <workItem from="1665156171819" duration="1993000" />
+      <workItem from="1665226253529" duration="1000" />
     </task>
-    <task id="LOCAL-00001" summary="Documentación de Crop y Zoom2x">
-      <created>1665084076093</created>
+    <task id="LOCAL-00001" summary="prueba_">
+      <created>1664873940074</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1665084076094</updated>
+      <updated>1664873940074</updated>
     </task>
-    <task id="LOCAL-00002" summary="Documentación del programa Subimagen.cpp">
-      <created>1665084102862</created>
+    <task id="LOCAL-00002" summary="prueba_">
+      <created>1665072855813</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1665084102862</updated>
+      <updated>1665072855813</updated>
     </task>
-    <task id="LOCAL-00003" summary="Método Zoom2X() terminado y funcional">
-      <created>1665101375962</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1665101375962</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,9 +193,18 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../GIT" />
     </ignored-roots>
-    <MESSAGE value="Documentación de Crop y Zoom2x" />
-    <MESSAGE value="Documentación del programa Subimagen.cpp" />
-    <MESSAGE value="Método Zoom2X() terminado y funcional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Método Zoom2X() terminado y funcional" />
+    <MESSAGE value="prueba_" />
+    <option name="LAST_COMMIT_MESSAGE" value="prueba_" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/estudiante/src/image.cpp</url>
+          <line>235</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

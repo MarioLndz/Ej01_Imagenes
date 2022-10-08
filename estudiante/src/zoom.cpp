@@ -53,7 +53,12 @@ int main (int argc, char *argv[]){
     cout << "   Imagen   = " << image.get_rows()  << " filas x " << image.get_cols() << " columnas " << endl;
 
     // Calcular el zoom
-    Image zoom = image.Zoom2X();
+
+    //Nos quedamos con la subimagen que nos interesa
+    Image subimagen = image.Crop(fila, col, lado, lado);
+
+    //Le aplicamos el zoom a la subimagen
+    Image zoom = subimagen.Zoom2X();
 
     // Guardar la imagen resultado en el fichero
     if (zoom.Save(fich_rdo))
