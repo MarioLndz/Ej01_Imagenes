@@ -195,8 +195,18 @@ double Image::Mean(int i, int j, int height, int width) const {
 }
 Image Image::Subsample(int factor) const {
 
+    Image icono(int(get_rows()/factor), int(get_cols()/factor));
 
-    return Image();
+    for(int i=0; i<icono.get_rows(); i++){
+        for(int j=0; j<icono.get_cols(); j++){
+
+            icono.set_pixel(i, j, Mean(i*factor,j*factor ,factor, factor));
+
+        }
+    }
+
+    return(icono);
+
 }
 
 Image Image::Crop(int nrow, int ncol, int height, int width) const {
