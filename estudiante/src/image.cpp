@@ -214,28 +214,31 @@ Image Image::Subsample(int factor) const {
 }
 
 Image Image::Crop(int nrow, int ncol, int height, int width) const {
+    int num_columnas = get_cols();
+
     //Compruebo la columna
     if (ncol < 0){
         width = width + ncol;
         ncol = 0;
 
-    } else if (ncol < cols){
-        if (ncol+width > cols){
-            width = width - ((ncol+width) - cols);
+    } else if (ncol < num_columnas){
+        if (ncol+width > num_columnas){
+            width = width - ((ncol+width) - num_columnas);
         }
 
     } else {
         width = 0;
     }
 
+    int num_filas = get_rows();
     //Compruebo la fila
     if (nrow < 0){
         height = height + nrow;
         nrow = 0;
 
-    } else if (nrow < rows){
-        if (nrow+height > rows){
-            height = height - ((nrow+height) - rows);
+    } else if (nrow < num_filas){
+        if (nrow+height > num_filas){
+            height = height - ((nrow+height) - num_filas);
         }
 
     } else {
