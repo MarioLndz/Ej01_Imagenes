@@ -243,10 +243,10 @@ Image Image::Crop(int nrow, int ncol, int height, int width) const {
 
     }
 
-    Image result(width, height);
+    Image result(height, width);
 
-    for (int f = 0; f < width; f++){
-        for (int c = 0; c < height; c++){
+    for (int f = 0; f < height; f++){
+        for (int c = 0; c < width; c++){
             result.set_pixel(f, c, get_pixel(nrow+f, ncol+c));
         }
     }
@@ -258,7 +258,6 @@ Image Image::Zoom2X() const {
 
     //Creamos una imagen con 2n-1 columnas y la completamos
     Image zoom_(get_rows(), (get_cols() * 2) - 1);
-    cout << "Creada Imagen Zoom_: " << zoom_.get_rows() << "x" << zoom_.get_cols() << endl;
 
     for(int j=0; j<zoom_.get_cols(); ++j) {
 
@@ -282,7 +281,6 @@ Image Image::Zoom2X() const {
 
     //Ahora creamos la imagen definitiva y repetimos el proceso
     Image zoom((get_rows()*2) - 1, zoom_.get_cols());
-    cout << "Creda Imagen Zoom: " << zoom.get_rows() << "x" << zoom.get_cols() << endl;
 
     //Copiamos las filas de zoom_ en zoom
     for(int i = 0; i < zoom.get_rows(); i++) {
@@ -299,12 +297,20 @@ Image Image::Zoom2X() const {
             //Interpolamos las filas restantes
 
             for (int j = 0; j < zoom.get_cols(); j++) {
+                if(j%2 == 0){
+                    //Fila y columna impares, tomaremos el valor medio de sus vecinos
+                    zoom.set_pixel(i, j, round((zoom_.get_pixel((i - 1) / 2, j) + zoom_.get_pixel((i + 1) / 2, j)) / 2.0));
+                } else {
+                    //Fila y columna pares, tomaremos la media de los cuatro vecinos de sus diagonales
+                    int suma =   zoom_.get_pixel((i-1)/2, j-1) + zoom_.get_pixel((i-1)/2, j+1) +
+                                 zoom_.get_pixel((i+1)/2, j-1) + zoom_.get_pixel((i+1)/2, j+1);
 
-                zoom.set_pixel(i, j, round((zoom_.get_pixel((i - 1) / 2, j) + zoom_.get_pixel((i + 1) / 2, j)) / 2.0));
+                    zoom.set_pixel(i, j, round(suma/4.0));
+
+                }
 
             }
         }
-
     }
 
     return (zoom);
