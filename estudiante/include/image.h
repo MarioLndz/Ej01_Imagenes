@@ -11,7 +11,6 @@
 #include "imageIO.h"
 
 
-
 typedef unsigned char byte;
 
 enum LoadResult: unsigned char {

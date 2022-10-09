@@ -73,5 +73,20 @@ Crea una imagen de un tamaño muy reducido a partir de una imagen original a tra
 @param "<factor>" factor de reducción.
 @post La imagen resultante tendrá (filas/factor)x(cols/factor).
 
+___
+
+## Contraste:
+@image html contraste.png
+Genera una imagen de niveles de gris con más contraste que la original.
+> __contraste__ \<fich_orig\> \<fich_rdo\> \<e1\> \<e2\> \<s1\> \<s2\>
+@param "<fich_orig>" Nombre del fichero que contiene la imagen original.
+@param "<fich_rdo>" Nombre del fichero que contendrá la imagen resultado.
+@param "<e1>" Umbral inferior de la imagen de entrada.
+@param "<e2>" Umbral superior de la imagen de entrada.
+@param "<s1>" Umbral inferior de la imagen de salida.
+@param "<s2>" Umbral superior de la imagen de salida.
+@pre 0 <= (e1, e2, s1, s2) <= 255
+@pre @p e1 < @p e2
+@pre @p s1 < @p s2
 
 */

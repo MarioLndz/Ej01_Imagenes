@@ -9,10 +9,12 @@
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="practica2" targetName="negativo" />
+      <config projectName="practica2" targetName="contraste" />
       <config projectName="practica2" targetName="image" />
       <config projectName="practica2" targetName="subimagen" />
       <config projectName="practica2" targetName="doc_doxygen" />
       <config projectName="practica2" targetName="zoom" />
+      <config projectName="practica2" targetName="icono" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -21,10 +23,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="Initial commit">
+    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="Documentación de los ejecutables Zoom e Icono">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudiante/src/image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/image.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/juez.sh" beforeDir="false" afterPath="$PROJECT_DIR$/juez.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/doc/mainpage.dox" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/doc/mainpage.dox" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/include/image.h" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/include/image.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +69,23 @@
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Shell Script.juez.sh">
+  <component name="RunManager" selected="CMake Application.doc_doxygen">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="contraste" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="contraste" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="contraste">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="doc_doxygen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="doc_doxygen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="icono" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="vacas.pgm icono.pgm 2" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="icono" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="icono">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -78,17 +95,17 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="negativo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="negativo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="negativo">
+    <configuration name="negativo" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="vacas.pgm out.pgm" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="negativo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="negativo">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="subimagen" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="vacas.pgm cabeza.pgm 85 145 60 80" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="subimagen" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="subimagen">
+    <configuration name="subimagen" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="vacas.pgm cabeza.pgm 85 145 60 60" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="subimagen" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="subimagen">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="zoom" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./vacas.pgm Prueba_zoom.pgm 254 254 10" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="zoom" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="zoom">
+    <configuration name="zoom" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./vacas.pgm Prueba_zoom.pgm 85 145 60" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$/img" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="zoom" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="zoom">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -109,7 +126,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="CMake Application.contraste" />
       <item itemvalue="CMake Application.doc_doxygen" />
+      <item itemvalue="CMake Application.icono" />
       <item itemvalue="CMake Application.image" />
       <item itemvalue="CMake Application.negativo" />
       <item itemvalue="CMake Application.subimagen" />
@@ -171,7 +190,49 @@
       <option name="project" value="LOCAL" />
       <updated>1665229714691</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Corregido error al subir archivos, tests Ok">
+      <created>1665338755506</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665338755506</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Modificado explicación de uso tras error de número de argumentos">
+      <created>1665343055196</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665343055196</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Documentación para todos los métodos menos para ShuffleRows">
+      <created>1665343103988</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665343103988</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Cambiado código para usar el método Invierte()">
+      <created>1665343120755</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665343120755</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Copiado código anterior">
+      <created>1665343156445</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665343156445</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Documentación de los ejecutables Zoom e Icono">
+      <created>1665347372716</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665347372716</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +276,12 @@
     <MESSAGE value="Método Crop corregido" />
     <MESSAGE value="Añadido ambos datos para enviar al juez" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Corregido error al subir archivos, tests Ok" />
+    <MESSAGE value="Modificado explicación de uso tras error de número de argumentos" />
+    <MESSAGE value="Documentación para todos los métodos menos para ShuffleRows" />
+    <MESSAGE value="Cambiado código para usar el método Invierte()" />
+    <MESSAGE value="Copiado código anterior" />
+    <MESSAGE value="Documentación de los ejecutables Zoom e Icono" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentación de los ejecutables Zoom e Icono" />
   </component>
 </project>
