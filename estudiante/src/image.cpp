@@ -178,34 +178,38 @@ double Image::Mean(int i, int j, int height, int width) const {
     //Recorremos la matriz o submatriz indicada y calculamos la
     //suma de todos los valores
     double suma=0;
-    for(int fila=i; fila<(i+height); i++){
-        for(int col=j; col<(j+width); j++){
+    for(int fila=i; fila<(i+height); fila++){
+        for(int col=j; col<(j+width); col++){
 
-            suma+= get_pixel(fila, col);
+            suma += get_pixel(fila, col);
 
         }
     }
 
     //Calculamos la media dividiendo entre el numero total de
     //pixeles sumados
-    double media = round(suma/(height*width));
+    double media = suma/(height*width*1.0);
 
     return(media);
+
 
 }
 Image Image::Subsample(int factor) const {
 
-    Image icono(int(get_rows()/factor), int(get_cols()/factor));
+    Image sub(int(get_rows()/factor), int(get_cols()/factor));
 
-    for(int i=0; i<icono.get_rows(); i++){
-        for(int j=0; j<icono.get_cols(); j++){
+    for(int i=0; i<sub.get_rows(); i++){
+        for(int j=0; j<sub.get_cols(); j++){
 
-            icono.set_pixel(i, j, Mean(i*factor,j*factor ,factor, factor));
+            byte nuevo = round(Mean(i*factor,j*factor ,factor, factor));
+            sub.set_pixel(i, j, nuevo);
 
         }
     }
 
-    return(icono);
+    return(sub);
+
+
 
 }
 
