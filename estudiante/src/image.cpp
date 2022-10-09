@@ -320,7 +320,7 @@ void Image::AdjustContrast (byte in1, byte in2, byte out1, byte out2){
 
     //Recorremos toda la imagen y en función de en que tramo de
     //la escala de grises se encuentre el byte, calculamos
-    //el nuevo byte usando una transformación lineal
+    // el nuevo byte usando una transformación lineal
     for(int k=0; k<size(); k++){
 
         if(get_pixel(k) < in1 ){
