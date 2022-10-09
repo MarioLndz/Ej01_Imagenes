@@ -20,7 +20,7 @@ int main (int argc, char *argv[]){
     // Comprobar validez de la llamada
     if (argc != 4){
         cerr << "Error: Numero incorrecto de parametros.\n";
-        cerr << "Uso: subimagen <FichImagenOriginal> <FichImagenDestino> <FilaOriginal> <ColOriginal> <AnchoNuevo> <LargoNuevo>\n";
+        cerr << "Uso: icono <FichImagenOriginal> <FichImagenDestino> <Factor>\n";
         exit (1);
     }
 
@@ -48,9 +48,7 @@ int main (int argc, char *argv[]){
     cout << "   Imagen   = " << image.get_rows()  << " filas x " << image.get_cols() << " columnas " << endl;
 
     // Calculamos el icono
-    Image subsample;
-
-    subsample = image.Subsample(factor);
+    Image subsample = image.Subsample(factor);
 
     // Guardar la imagen resultado en el fichero
     if (subsample.Save(fich_rdo))
