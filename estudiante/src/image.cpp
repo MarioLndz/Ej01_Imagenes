@@ -318,7 +318,7 @@ Image Image::Zoom2X() const {
 
 void Image::AdjustContrast (byte in1, byte in2, byte out1, byte out2){
 
-    //Calculamos la arte constante e independiente del valor
+    //Calculamos la parte constante e independiente del valor
     // de cada píxel a transformar
     const double TRAMO1 = 1.0*out1/in1;
     const double TRAMO2 = 1.0*(out2 - out1)/(in2 - in1);
