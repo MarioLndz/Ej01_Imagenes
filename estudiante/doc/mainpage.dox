@@ -25,16 +25,18 @@ mayor parte de la sintaxis de Doxygen para comentar código en su
 
 A RELLENAR POR EL ESTUDIANTE
 
+
 # Ejecutables
 
-@image html invert.png
 ## Negativo:
-
+@image html invert.png
 Calcula el negativo de una imagen
 
 > __negativo__ \<FichImagenOriginal\> \<FichImagenDestino\>
 @param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
 @param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
+
+___
 
 ## Subimagen:
 @image html crop.png
@@ -47,7 +49,10 @@ Genera, por copia, una imagen PGM a partir de otra imagen PGM. La imagen generad
 @param "<filas_sub>" Número de filas de la subimagen que se va a extraer.
 @param "<cols_sub>" Número de columnas de la subimagen que se va a extraer.
 
+___
+
 ## Zoom:
+@image html zoom.png
 Realiza un zoom 2X de una porción de la imagen mediante un simple procedimiento de interpolación.
 > __zoom__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<lado\>
 @param "<fich_orig>" Nombre del fichero que contiene la imagen original.
@@ -56,5 +61,17 @@ Realiza un zoom 2X de una porción de la imagen mediante un simple procedimiento
 @param "<col>" Coordenada @b X (sobre la imagen original) de la esquina superior izquierda de la subimagen que se va a extraer.
 @param "<lado>" Tamaño del lado del cuadrado.
 @post Si el cuadrado descrito no está totalmente incluído en la imagen se creará el mayor cuadrado posible.
+
+___
+
+## Icono:
+@image html icono.png
+Crea una imagen de un tamaño muy reducido a partir de una imagen original a través de un algoritmo de reducción.
+> __icono__ \<fich_orig\> \<fich_rdo\> \<factor\>
+@param "<fich_orig>" Nombre del fichero que contiene la imagen original.
+@param "<fich_rdo>" Nombre del fichero donde se guardará el icono.
+@param "<factor>" factor de reducción.
+@post La imagen resultante tendrá (filas/factor)x(cols/factor).
+
 
 */
