@@ -248,16 +248,43 @@ void set_pixel (int i, int j, byte value);
       */
     bool Load (const char * file_path);
 
-    // Invierte
+    /**
+     * @brief Invierte una imagen plana (obtiene el negativo de la imagen)
+     * @post El objeto que llama a la función es modificado
+     */
     void Invert();
 
-    // Modifica el contraste de una Imagen .
+    /**
+     * @brief Modifica el contraste de una Imagen
+     * @param in1 Umbral inferior de la imagen de entrada
+     * @param in2 Umbral superior de la imagen de entrada
+     * @param out1 Umbral inferior de la imagen de salida
+     * @param out2 Umbral superior de la imagen de salida
+     * @pre 0 <= (in1, in2, out1, out2) <= 255
+     * @pre in1 < in2
+     * @pre out1 < out2
+     * @post El objeto que llama a la función es modificado
+     */
     void AdjustContrast (byte in1, byte in2, byte out1, byte out2);
 
-    // Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.
+    /**
+     * @brief Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.
+     * @param i Fila (coordenada Y) del pixel superior izquierdo
+     * @param j Columna (coordenada X) del pixel superior izquierdo
+     * @param height Altura del fragmento
+     * @param width Ancho del fragmento
+     * @return Media de los píxeles
+     */
     double Mean (int i, int j, int height, int width) const;
 
-    // Genera un icono como reducción de una imagen.
+    /**
+     * @brief Genera un icono como reducción de una imagen
+     * @param factor Factor de reducción de la imagen original con respecto al icono
+     * @pre @p factor > 0
+     * @return La imagen iconizada
+     * @post La imagen no se modifica
+     * @post La imagen resultante tendrá tamaño int(filas/factor) X int(columnsa/factor). Descartando los decimales de la división
+     */
     Image Subsample(int factor) const;
 
     /**
