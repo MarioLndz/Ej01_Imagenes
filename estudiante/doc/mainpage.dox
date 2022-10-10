@@ -23,12 +23,20 @@ mayor parte de la sintaxis de Doxygen para comentar código en su
 
 # Introducción
 
-A RELLENAR POR EL ESTUDIANTE
+### Ejecutables:
+- @ref negativo
+- @ref subimagen
+- @ref zoom
+- @ref icono
+- @ref contraste
+- @ref barajar
 
+### Análisis de la eficiencia
+- @ref eficiencia
 
-# Ejecutables
+@page exe Ejecutables
 
-## Negativo:
+@subsection negativo Negativo
 @image html invert.png
 Calcula el negativo de una imagen
 
@@ -38,7 +46,7 @@ Calcula el negativo de una imagen
 
 ___
 
-## Subimagen:
+@subsection subimagen Subimagen
 @image html crop.png
 Genera, por copia, una imagen PGM a partir de otra imagen PGM. La imagen generada será, necesariamente, de un tamaño menor o igual que la original
 > __subimagen__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<filas_sub\> \<cols_sub\>
@@ -51,7 +59,7 @@ Genera, por copia, una imagen PGM a partir de otra imagen PGM. La imagen generad
 
 ___
 
-## Zoom:
+@subsection zoom Zoom
 @image html zoom.png
 Realiza un zoom 2X de una porción de la imagen mediante un simple procedimiento de interpolación.
 > __zoom__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<lado\>
@@ -64,7 +72,7 @@ Realiza un zoom 2X de una porción de la imagen mediante un simple procedimiento
 
 ___
 
-## Icono:
+@subsection icono Icono
 @image html icono.png
 Crea una imagen de un tamaño muy reducido a partir de una imagen original a través de un algoritmo de reducción.
 > __icono__ \<fich_orig\> \<fich_rdo\> \<factor\>
@@ -75,7 +83,7 @@ Crea una imagen de un tamaño muy reducido a partir de una imagen original a tra
 
 ___
 
-## Contraste:
+@subsection contraste Contraste
 @image html contraste.png
 Genera una imagen de niveles de gris con más contraste que la original.
 > __contraste__ \<fich_orig\> \<fich_rdo\> \<e1\> \<e2\> \<s1\> \<s2\>
@@ -88,5 +96,18 @@ Genera una imagen de niveles de gris con más contraste que la original.
 @pre 0 <= (e1, e2, s1, s2) <= 255
 @pre @p e1 < @p e2
 @pre @p s1 < @p s2
+
+___
+
+@subsection barajar Barajar
+@image html shuffle.png
+Genera una imagen a partir de un barajado pseudoaleatorio de las filas de otra imagen
+> __barajar__ \<fich_orig\> \<fich_rdo\>
+@param "<fich_orig>" Nombre del fichero que contiene a la imagen original.
+@param "<fich_rdo>" Nombre del fichero que contendrá la imagen resultado.
+
+
+@page eficiencia Análisis de eficiencia
+
 
 */

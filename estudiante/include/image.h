@@ -10,7 +10,10 @@
 #include <cstdlib>
 #include "imageIO.h"
 
-
+/**
+ * @typedef byte
+ * @brief Tipo asociado a cada una de las casillas de un objeto de tipo Image
+ */
 typedef unsigned char byte;
 
 enum LoadResult: unsigned char {
@@ -42,12 +45,12 @@ class Image{
     /**
          @page page_repImagen Representación del TDA Imagen
 
-         @section sec_Image_A Título A
+         @section sec_Image_A Representación a través de un array-2D dinámico
 
+         Haremos uso de un único vector de tamaño `rows*cols` para representar la imagen. De esta forma, la "matriz" se ve
+         representada de manera que `img[i]` será un puntero que apuntará a la posición de memoria correspondiente a `img[0][i*cols]`
 
-         Contenido de la sección A.
-
-         @section sec_Image_B Título  B
+         @section sec_Image_B Representación a través de un array de arrays dinámico
 
          Contenido de la sección B.
 
@@ -310,7 +313,7 @@ void set_pixel (int i, int j, byte value);
      * @pre rows < 9973
      * @post El objeto que llama al método contiene ahora una nueva
      * imagen igual que la anterior pero con las filas
-     * ordenadas según el siguiente algoritmo: r´=(r*p)mod ows
+     * ordenadas según el siguiente algoritmo: @p "r´ = (r*p) mod rows"
      */
     void ShuffleRows();
 } ;
