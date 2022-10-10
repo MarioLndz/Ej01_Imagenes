@@ -305,8 +305,13 @@ void set_pixel (int i, int j, byte value);
     Image Zoom2X() const;
 
 
-
-    // Baraja pseudoaleatoriamente las filas de una imagen.
+    /**
+     * @brief Baraja pseudoaleatoriamente las filas de una imagen
+     * @pre rows < 9973
+     * @post El objeto que llama al método contiene ahora una nueva
+     * imagen igual que la anterior pero con las filas
+     * ordenadas según el siguiente algoritmo: r´=(r*p)mod ows
+     */
     void ShuffleRows();
 } ;
 
