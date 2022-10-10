@@ -35,6 +35,7 @@ mayor parte de la sintaxis de Doxygen para comentar código en su
 - @ref eficiencia
 
 @page exe Ejecutables
+@brief Lista con todos los ejecutables
 
 @subsection negativo Negativo
 @image html invert.png
