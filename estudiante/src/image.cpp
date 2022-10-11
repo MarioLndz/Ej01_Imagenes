@@ -320,37 +320,47 @@ Image Image::Zoom2X() const {
 }
 
 void Image::AdjustContrast (byte in1, byte in2, byte out1, byte out2){
+    bool pre1 = ((0 <= in1) && (in1 <= 255) &&
+                (0 <= in2) && (in2 <= 255) &&
+                (0 <= out1) && (out1 <= 255) &&
+                (0 <= out2) && (out2 <= 255));
+    bool pre2 = (in1 < in2);
+    bool pre3 = (out1 < out2);
 
-    //Calculamos la parte constante e independiente del valor
-    // de cada píxel a transformar
-    const double TRAMO1 = 1.0*out1/in1;
-    const double TRAMO2 = 1.0*(out2 - out1)/(in2 - in1);
-    const double TRAMO3 = 1.0*(255 - out2)/(255 - in2);
 
-    //Recorremos toda la imagen y en función de en que tramo de
-    //la escala de grises se encuentre el byte, calculamos
-    // el nuevo byte usando una transformación lineal
-    for(int k=0; k<size(); k++){
+    if (pre1 && pre2 && pre3){
+        //Calculamos la parte constante e independiente del valor
+        // de cada píxel a transformar
+        const double TRAMO1 = 1.0*out1/in1;
+        const double TRAMO2 = 1.0*(out2 - out1)/(in2 - in1);
+        const double TRAMO3 = 1.0*(255 - out2)/(255 - in2);
 
-        if(get_pixel(k) < in1 ){
+        //Recorremos toda la imagen y en función de en que tramo de
+        //la escala de grises se encuentre el byte, calculamos
+        // el nuevo byte usando una transformación lineal
+        for(int k=0; k<size(); k++){
 
-            set_pixel(k, round((TRAMO1 * get_pixel(k) )));
+            if(get_pixel(k) < in1 ){
+
+                set_pixel(k, round((TRAMO1 * get_pixel(k) )));
+
+            }
+
+            else if(get_pixel(k) <= in2){
+
+                set_pixel(k, round(out1 + (TRAMO2 * (get_pixel(k)-in1) )));
+
+            }
+
+            else{
+
+                set_pixel(k, round(out2 + (TRAMO3 * (get_pixel(k)-in2) )));
+
+            }
 
         }
-
-        else if(get_pixel(k) <= in2){
-
-            set_pixel(k, round(out1 + (TRAMO2 * (get_pixel(k)-in1) )));
-
-        }
-
-        else{
-
-            set_pixel(k, round(out2 + (TRAMO3 * (get_pixel(k)-in2) )));
-
-        }
-
     }
+
 
 
 

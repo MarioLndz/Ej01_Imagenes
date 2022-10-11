@@ -313,7 +313,7 @@ void set_pixel (int i, int j, byte value);
      * @pre rows < 9973
      * @post El objeto que llama al método contiene ahora una nueva
      * imagen igual que la anterior pero con las filas
-     * ordenadas según el siguiente algoritmo: @p "r´ = (r*p) mod rows"
+     * ordenadas según el siguiente algoritmo: `r´ = (r*p) mod rows`
      */
     void ShuffleRows();
 } ;
