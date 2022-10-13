@@ -23,13 +23,15 @@ void Image::Allocate(int nrows, int ncols, byte * buffer){
 
     img = new byte * [rows];
 
-    if (buffer != 0)
-        img[0] = buffer;
-    else
-        img[0] = new byte [rows * cols];
+    for (int i = 0; i < rows; ++i){
+        img[i] = new byte [cols];
+    }
 
-    for (int i=1; i < rows; i++)
-        img[i] = img[i-1] + cols;
+    if (buffer != 0){
+        for (int i = 0; i < rows*cols; ++i){
+            set_pixel(i, buffer[i]);
+        }
+    }
 }
 
 // Función auxiliar para inicializar imágenes con valores por defecto o a partir de un buffer de datos
@@ -161,8 +163,11 @@ byte Image::get_pixel (int k) const {
 // Métodos para almacenar y cargar imagenes en disco
 bool Image::Save (const char * file_path) const {
     // TODO this makes assumptions about the internal representation
-    byte * p = img[0];
-    return WritePGMImage(file_path, p, rows, cols);
+    byte data [rows*cols];
+    for (int i = 0; i<rows*cols; ++i){
+        data[i] = get_pixel(i);
+    }
+    return WritePGMImage(file_path, data, rows, cols);
 }
 
 void Image::Invert() {

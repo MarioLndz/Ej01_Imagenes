@@ -28,10 +28,11 @@ void chrono_experiment(int rows, int cols, int repetitions) {
     chrono::duration<double> total_duration = chrono::duration_cast<chrono::duration<double>>(finish_time - start_time);
 
     // Dividimos el tiempo total entre el número de repeticiones para obtener el tiempo medio por ejecución
-    cout << rows << "\t" << total_duration.count()/repetitions << endl;
+    cout << rows << "\t" << cols << "\t" << total_duration.count()/repetitions << endl;
+
 }
 int main() {
-    for (int i = 100; i <= 2500; i += 100){
+    for (int i = 100; i <= 3500; i += 100){
         chrono_experiment(i,i, 30);
     }
     return 0;

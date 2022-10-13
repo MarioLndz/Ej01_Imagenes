@@ -25,8 +25,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="prueba_">
+    <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="Foto del método Barajar">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_10_22_20_43_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/analisis_eficiencia.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/analisis_eficiencia.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante/src/image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante/src/image.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,12 +75,7 @@
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.analisis_eficiencia">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Shell Script.juez.sh">
     <configuration name="analisis_eficiencia" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="analisis_eficiencia" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="analisis_eficiencia">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -175,8 +173,8 @@
       <workItem from="1665573100154" duration="1050000" />
       <workItem from="1665574232238" duration="215000" />
       <workItem from="1665590818970" duration="780000" />
-      <workItem from="1665671266773" duration="6853000" />
-      <workItem from="1665679273523" duration="421000" />
+      <workItem from="1665671266773" duration="6249000" />
+      <workItem from="1665696943735" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="prueba_">
       <created>1664873940074</created>
@@ -248,12 +246,12 @@
       <option name="project" value="LOCAL" />
       <updated>1665418468808</updated>
     </task>
-    <task id="LOCAL-00011" summary="prueba_">
-      <created>1665678178272</created>
+    <task id="LOCAL-00011" summary="Foto del método Barajar">
+      <created>1665688263376</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1665678178272</updated>
+      <updated>1665688263376</updated>
     </task>
     <option name="localTasksCounter" value="12" />
     <servers />
@@ -294,6 +292,7 @@
       <path value="$PROJECT_DIR$/../GIT" />
     </ignored-roots>
     <MESSAGE value="prueba_" />
-    <option name="LAST_COMMIT_MESSAGE" value="prueba_" />
+    <MESSAGE value="Foto del método Barajar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Foto del método Barajar" />
   </component>
 </project>
