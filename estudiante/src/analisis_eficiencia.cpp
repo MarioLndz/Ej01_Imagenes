@@ -10,14 +10,14 @@ using namespace std;
 void chrono_experiment(int rows, int cols, int repetitions) {
     // Inicializamos el experimento antes del bucle de conteo de tiempo para no afectar al análisis
     Image image(rows, cols, 0);
-    /*for (int i = 0; i < rows; ++i){
+    for (int i = 0; i < rows; ++i){
         for (int j = 0; j < cols; ++j){
 
             image.set_pixel(i, j, byte(rand() % 1000));
 
         }
 
-    }*/
+    }
 
     // Medimos el tiempo antes de iniciar el expermiento
     chrono::high_resolution_clock::time_point start_time = chrono::high_resolution_clock::now();

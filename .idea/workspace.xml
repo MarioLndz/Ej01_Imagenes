@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddda1e98-f1f0-4c14-ba80-7a918cf8df79" name="Changes" comment="prueba_">
-      <change afterPath="$PROJECT_DIR$/estudiante/src/analisis_eficiencia.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +73,9 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.analisis_eficiencia">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="analisis_eficiencia" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="practica2" TARGET_NAME="analisis_eficiencia" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="practica2" RUN_TARGET_NAME="analisis_eficiencia">
@@ -177,7 +175,8 @@
       <workItem from="1665573100154" duration="1050000" />
       <workItem from="1665574232238" duration="215000" />
       <workItem from="1665590818970" duration="780000" />
-      <workItem from="1665671266773" duration="6249000" />
+      <workItem from="1665671266773" duration="6853000" />
+      <workItem from="1665679273523" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="prueba_">
       <created>1664873940074</created>
@@ -249,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665418468808</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="prueba_">
+      <created>1665678178272</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665678178272</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
