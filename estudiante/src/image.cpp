@@ -379,12 +379,8 @@ void Image::ShuffleRows() {
 
     int newr;
     for (int r=0; r<rows; r++){
-
         newr = r*p % rows;
-        for (int c=0; c<cols;c++)
-
-            temp.set_pixel(r,c,get_pixel(newr,c));
-
+        temp.img[r] = this->img[newr];
     }
 
     Copy(temp);

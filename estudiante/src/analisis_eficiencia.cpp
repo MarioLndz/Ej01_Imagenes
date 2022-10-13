@@ -32,8 +32,8 @@ void chrono_experiment(int rows, int cols, int repetitions) {
 
 }
 int main() {
-    for (int i = 100; i <= 3500; i += 100){
-        chrono_experiment(i,i, 30);
+    for (int i = 100; i <= 3000; i += 100){
+        chrono_experiment(i,100, 30);
     }
     return 0;
 }
