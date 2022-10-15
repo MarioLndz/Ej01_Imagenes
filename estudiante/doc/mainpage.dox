@@ -109,6 +109,19 @@ Genera una imagen a partir de un barajado pseudoaleatorio de las filas de otra i
 
 
 @page eficiencia Análisis de eficiencia
+@section primera_rep Primera Representación
+## Filas y Columnas variables:
+
+## Filas fijas (columnas = 100)
+
+## Columnas fijas (filas = 100)
+
+@section segunda_rep Segunda Representación
+## Filas y Columnas variables:
+
+## Filas fijas (columnas = 100)
+
+## Columnas fijas (filas = 100)
 
 
 */
