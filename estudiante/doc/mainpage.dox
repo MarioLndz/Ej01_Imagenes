@@ -123,7 +123,7 @@ es decir, la que tiene un coeficiente de correlación(R² entre [0,1]) mayor es 
 __polinomial de grado dos__, como esperábamos.
 
 ## Filas fijas (filas = 100) / Columnas fijas (columnas = 100):
-El análisis teórico nos indica que estamos ante una eficiencia de __O(rows)/O(cols)__
+El análisis teórico nos indica que estamos ante una eficiencia de __O(rows),O(cols)__ (respectivamente)
 ya que solo movemos o por un lado las columnas o por otro lado las filas
 
 Esto coincide con el análisis empírico ya que la gráfica que mejor ajusta los datos,
