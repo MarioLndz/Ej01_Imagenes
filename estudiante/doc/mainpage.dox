@@ -109,19 +109,50 @@ Genera una imagen a partir de un barajado pseudoaleatorio de las filas de otra i
 
 
 @page eficiencia Análisis de eficiencia
+> [__Enlace__ a las gráficas del análisis de eficiencia](https://ugres-my.sharepoint.com/:x:/g/personal/e_jaimecrz04_ms_ugr_es/Ee4cMK-BpR9BvLF1enI-bh4BGf4G8KANg5IBchN-gCg4cQ?e=aH1sLr).
+
 @section primera_rep Primera Representación
+@ref sec_Image_A
+
 ## Filas y Columnas variables:
+El análisis teórico nos indica que estamos ante una eficiencia de __O(rows*cols)__
+ya que tenemos que recorrer las filas y columnas completas al ejecutar Shufflerows
 
-## Filas fijas (columnas = 100)
+Esto coincide con el análisis empírico ya que la gráfica que mejor ajusta los datos,
+es decir, la que tiene un coeficiente de correlación(R² entre [0,1]) mayor es la
+__polinomial de grado dos__, como esperábamos.
 
-## Columnas fijas (filas = 100)
+## Filas fijas (filas = 100) / Columnas fijas (columnas = 100):
+El análisis teórico nos indica que estamos ante una eficiencia de __O(rows)/O(cols)__
+ya que solo movemos o por un lado las columnas o por otro lado las filas
+
+Esto coincide con el análisis empírico ya que la gráfica que mejor ajusta los datos,
+es decir, la que tiene un coeficiente de correlación(R² entre [0,1]) mayor es la
+__polinomial de grado uno__, como esperábamos.
 
 @section segunda_rep Segunda Representación
+@ref sec_Image_B
+
 ## Filas y Columnas variables:
+Al cambiar la representación aunque variemos filas y columnas, estamos hablando
+de __O(rows)__, ya que solo necesitamos variar las filas.
 
-## Filas fijas (columnas = 100)
+Esto coincide con el análisis empírico ya que si miramos la gráfica, la que mejor
+la ajusta es una __polinomial de grado uno__, como esperábamos
 
-## Columnas fijas (filas = 100)
+## Filas fijas (filas = 100):
+En este caso, como ya hemos comentado, la nueva represantación solo afecta a las filas,
+luego si las filas quedan fijas, estamos antes __O(1)__
+
+Esto coincide con el análisis empírico ya que el ajuste es __constante__
+
+## Columnas fijas (columnas = 100):
+Por último si variamos solo las filas, nos va a salir claramente __O(rows)__
+ya que como hemos comentado anteriormente, para esta representación
+solo tenemos que recorrer las filas
+
+Esto coincide con el análisis empírico ya que el ajuste es __polinomial de grado uno__
+como esperábamos
 
 
 */

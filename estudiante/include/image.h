@@ -52,9 +52,8 @@ class Image{
 
          @section sec_Image_B Representación a través de un array de arrays dinámico
 
-         Contenido de la sección B.
-
-         Referencia a la \ref sec_Image_A
+         Haremos uso de un vector de tamaño `rows` de punteros a vectores de tamaño `cols` para representar la imagen.
+         De esta forma, para acceder a la fila `i` y columna `j` de la matriz bastará con escribir `ima[i][j]`
        **/
 private :
 
