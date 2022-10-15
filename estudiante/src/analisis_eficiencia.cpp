@@ -3,6 +3,7 @@
 #include <vector>
 #include <stdlib.h>
 #include <image.h>
+#include <fstream>
 
 using namespace std;
 
@@ -30,6 +31,11 @@ void chrono_experiment(int rows, int cols, int repetitions) {
     // Dividimos el tiempo total entre el número de repeticiones para obtener el tiempo medio por ejecución
     cout << rows << "\t" << cols << "\t" << total_duration.count()/repetitions << endl;
 
+    ofstream file;
+    file.open("../analisis.txt", ios::app);
+
+    file << rows << "\t" << cols << "\t" << total_duration.count()/repetitions << endl;
+    file.close();
 }
 int main() {
     for (int i = 100; i <= 3000; i += 100){

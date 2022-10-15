@@ -58,7 +58,10 @@ bool Image::Empty() const{
 
 void Image::Destroy(){
     if (!Empty()){
-        delete [] img[0];
+        for(int i = 0; i < rows; ++i){
+            delete [] img[i];
+        }
+
         delete [] img;
     }
 }
@@ -375,15 +378,18 @@ void Image::ShuffleRows() {
 
     const int p = 9973;
 
-    Image temp(rows,cols);
+    byte ** temp = new byte * [rows];
+    for (int i = 0; i < rows; ++i){
+        temp[i] = img[i];
+    }
 
     int newr;
     for (int r=0; r<rows; r++){
         newr = r*p % rows;
-        temp.img[r] = this->img[newr];
+        img[r] = temp[newr];
     }
-
-    Copy(temp);
+    delete [] temp;
+    temp = 0;
 
 }
 
