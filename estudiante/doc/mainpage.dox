@@ -127,11 +127,9 @@ ya que solo movemos o por un lado las columnas o por otro lado las filas.
 Esto coincide con el análisis empírico ya que la gráfica que mejor ajusta los datos,
 es decir, la que tiene un coeficiente de correlación(R² entre [0,1]) mayor es la
 __polinomial de grado uno__, como esperábamos.
-|   |   |   |
-|---|---|---|
-| @image html 1_rows.png |  | @image html 1_cols.png |
 
-\n\n
+@image html 1_rows.png
+@image html 1_cols.png
 
 @section segunda_rep Segunda Representación
 @ref sec_Image_B
