@@ -48,12 +48,21 @@ class Image{
          @section sec_Image_A Representación a través de un array-2D dinámico
 
          Haremos uso de un único vector de tamaño `rows*cols` para representar la imagen. De esta forma, la "matriz" se ve
-         representada de manera que `img[i]` será un puntero que apuntará a la posición de memoria correspondiente a `img[0][i*cols]`
+         representada de manera que `img[i]` será un puntero que apuntará a la posición de memoria correspondiente a `img[0][i*cols]`;
+         y donde cada elemento `img[i][j]` será en esencia `img[(i*cols) + j]`
+
+         @image html 1_array_unico.png
 
          @section sec_Image_B Representación a través de un array de arrays dinámico
 
          Haremos uso de un vector de tamaño `rows` de punteros a vectores de tamaño `cols` para representar la imagen.
-         De esta forma, para acceder a la fila `i` y columna `j` de la matriz bastará con escribir `ima[i][j]`
+         De esta forma, para acceder a la fila `i` y columna `j` de la matriz bastará con escribir `img[i][j]`
+
+         @image html 2_matriz.png
+
+         ---
+
+         Para ver la diferencia en el rendimiento entre ambas pinche [aqui](@ref eficiencia)
        **/
 private :
 
