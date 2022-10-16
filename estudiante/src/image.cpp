@@ -385,8 +385,10 @@ void Image::ShuffleRows() {
 
     int newr;
     for (int r=0; r<rows; r++){
+
         newr = r*p % rows;
         img[r] = temp[newr];
+
     }
     delete [] temp;
     temp = 0;
